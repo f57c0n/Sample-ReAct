@@ -30,7 +30,7 @@ class Register extends React.Component {
 
   //NOTE: this is the same as SIGNIN. can put in as its own and both can use the function
   onSubmitSignIn = () => {
-    fetch('http://localhost:3000/register', {
+    fetch('https://peaceful-earth-94315.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

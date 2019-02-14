@@ -130,7 +130,7 @@ class App extends Component {
     //     Clarifai.FACE_DETECT_MODEL,
     //     this.state.input)
     // ADD imageUrl stuff from back end
-      fetch('http://localhost:3000/imageUrl', {
+      fetch('https://peaceful-earth-94315.herokuapp.com/imageUrl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -140,7 +140,7 @@ class App extends Component {
       .then(response => response.json())  //=> to ensure that that the returned responsed is formatted correctly
       .then(response => {
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://peaceful-earth-94315.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
